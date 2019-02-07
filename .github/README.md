@@ -1,9 +1,13 @@
 <img src="../resources/icon.png" align="right" width="128" />
 
 # **{find+}**
+![Chrome Users](https://img.shields.io/chrome-web-store/users/fddffkdncgkkdjobemgbpojjeffmmofb.svg?style=flat&label=chrome%20users)
+![Firefox Users](https://img.shields.io/amo/users/brandon1024-find.svg?label=firefox%20users&style=flat)
+![Last Commit on GitHub](https://img.shields.io/github/last-commit/brandon1024/find.svg?style=flat)
+
 **{find+}** is a simple _Find-in-Page_ extension for Google Chrome hosting a the ability to search a web page or document by regular expression. It has been designed to look and behave much like the `CTRL-F` function, but extended to provide a feature-rich and robust user experience with the aim of completely replacing the native _Find-in-Page_ tool.
 
-Our principle is simple, to deliver a reliable, robust, repeatable, performant, and native-like tool for the software and web development industry. _Perfection is simply not good enough._
+Our principle is simple: deliver a reliable, robust, repeatable, performant, and native-like tool for the software and web development industry.
 
 <img src="screenshot.png"/>
 
@@ -13,30 +17,16 @@ As a software developer, looking through lengthy stack traces, continuous integr
 The idea to build this tool spawned as a response to poorly designed or dysfunctional regex-search extensions currently available, and the limited usefulness of the native tool. This extension has become a growing project aimed at giving developers better tools to simplify certain tasks and to improve upon the functionally-limited tools currently available.
 
 ## Getting Started
-The **{find+}** Chrome extension has recently transitioned to public beta and has become available in the [Chrome Web Store](https://chrome.google.com/webstore/category/extensions). You can install the extension [here](https://chrome.google.com/webstore/detail/find%2B/fddffkdncgkkdjobemgbpojjeffmmofb).
+The **{find+}** extension is available through the Chrome Web Store and through the Firefox Add-ons Store.
 
-Ready for extension development? You can also install the extension by using Developer Mode under the Chrome extension settings. These steps will help you get started.
+<img src="chrome-icon.png" width="16"/> Download the extension here: [find+ | Regex Find-in-Page Tool](https://chrome.google.com/webstore/detail/find%2B/fddffkdncgkkdjobemgbpojjeffmmofb).
 
-Before you begin, ensure that you install the extension from the `master` branch. All other branches are under active development, which may not be stable.
-
-First, you will need to clone the repository to your local machine. You can do this by clicking the green `Clone or Download` button in GitHub. If you are comfortable using git, you can copy the HTTPS clone link to your clipboard and clone the repository to a location on your local machine by running the following command in the terminal:
-
-```
-cd <directory you want to clone to>
-git clone <clone link from clipboard>
-```
-<sup>Note: If you are using a Windows machine, you may need to install git [here](https://git-for-windows.github.io/).</sup>
-
-Otherwise, you can click `Download ZIP` and extract the source files to a location on your computer. Ensure you are viewing the `master` branch.
-
-To install the extension in Chrome, navigate to `chrome://extensions`. Enabling Developer Mode will show a button to `Load Unpacked`, which you can use to navigate to the parent folder of the extension. Yay! You installed the extension!
-
-<img src="installation.png"/>
+<img src="firefox-icon.png" width="16"/> Download the extension here: [{find+} – Get this Extension for 🦊 Firefox](https://addons.mozilla.org/en-US/firefox/addon/brandon1024-find/).
 
 ## Keyboard Shortcuts
 To open the extension popup using a keyboard shortcut, you must first assign a keyboard shortcut to the extension through the Chrome settings. You can do this by following these steps:
 1. Navigate to the `Extensions` settings page in Chrome. Do this easily by typing `chrome://extensions/` in the URL navigation bar.
-2. In the top left click on the ☰ (hamburger menu icon), then click `Keyboard shortcuts`. This will make appear a dialog where you can modify the shortcuts for your installed extensions.
+2. In the top left click on the ☰  menu icon, then click `Keyboard shortcuts`. This will make appear a dialog where you can modify the shortcuts for your installed extensions.
 3. Locate the shortcut settings for find+. Click the input field located to the right of the label `Activate the extension`.
 4. Press the combination of keys you would like to use to open the extension. Once complete, press `OK`.
 
@@ -54,12 +44,15 @@ Several keyboard shortcuts exist directly in the extension for performing differ
 | ENTER             | ENTER             | Advance to the next occurrence of the regular expression in the page   |
 | SHIFT-ENTER       | SHIFT-ENTER       | Return to the previous occurrence of the regular expression in the page|
 | CTRL-SHIFT-ENTER  | CTRL-SHIFT-ENTER  | Follow the first highlighted link in the current occurrence focus      |
+| CTRL-ALT-C        | CTRL-OPTION-C     | Copy to the clipboard the currently highlighted text on the page.      |
+| CTRL-ALT-A        | CTRL-OPTION-A     | Copy to the clipboard the all highlighted text on the page.            |
 | CTRL-ALT-O        | CTRL-OPTION-O     | Expand or Collapse Options Pane                                        |
 | CTRL-ALT-R        | CTRL-OPTION-R     | Expand or Collapse Replace Text Pane                                   |
+| CTRL-ALT-H        | CTRL-OPTION-H     | Expand or Collapse History Pane                                        |
 | CTRL-ENTER or ESC | CTRL-ENTER or ESC | Close the extension popup                                              |
 
 ## Omnibox Support
-In version 1.4.0, we enabled omnibox support! This allows you to highlight text on a page without even opening the extension. To use this feature, type `find` in your browser's address bar, press `TAB`, and then enter a regular expression. Occurrences of the regular expression will become highlighted on the page as you type.
+In version 1.4.0, we introduced omnibox support! This allows you to highlight text on a page without even opening the extension. To use this feature, type `find` in your browser's address bar, press `TAB`, and then enter a regular expression. Occurrences of the regular expression will become highlighted on the page as you type.
 
 Pressing `ENTER` will leave the highlights in the page. To remove the highlights, simply refresh the page. If you don't want to leave the highlights in the page, just erase the text entered in the address bar.
 
@@ -80,6 +73,34 @@ See an issue we may have missed, or an idea for a new feature? Log an issue! We 
 
 ## Contributing
 Interested in contributing to **{find+}**? See [CONTRIBUTING](CONTRIBUTING.md).
+
+Ready for extension development? These steps will help you get started.
+
+Before you begin, you will need to fork your own copy of the find+ repository and clone the repository to your local machine. You can do this by clicking the green `Clone or Download` button in GitHub. Copy the SSH clone link to your clipboard and clone the repository to a location on your local machine by running the following command in the terminal:
+
+```
+cd <directory you want to clone to>
+git clone <clone link from clipboard>
+```
+<sup>Note: If you are using a Windows machine, you may need to install git [here](https://git-for-windows.github.io/).</sup>
+
+New features and improvents should be based off the `master` branch. All other branches are under active development, which may not be stable.
+
+To install the extension in Chrome to test your changes, navigate to `chrome://extensions`. Enabling Developer Mode will show a button to `Load Unpacked`, which you can use to navigate to the parent folder of the extension.
+
+<img src="installation.png"/>
+
+Before testing your changes in Firefox, you will first need to delete the Chrome manifest file `manifest.json`, and rename the firefox manifest file from `manifest_firefox.json` to `manifest.json`. Then, to install the extension in Firefox to test your changes, navigate to `about:debugging#addons`. Click `Load Temporary Add-on...` and select the `manifest.json` file.
+
+You can also use the build tool to package the extension for you. To package the extension:
+```
+./build.sh -m <path to manifest> -v <new version number> -o <build location>
+```
+
+Example:
+```
+./build.sh -m manifest.json -v 1.4.4 -o .build
+```
 
 ## Authors
 |[<img src="https://avatars3.githubusercontent.com/u/22732449?v=3&s=460" width="128">](https://github.com/brandon1024)|[<img src="https://avatars2.githubusercontent.com/u/27076448?v=3&s=460" width="128">](https://github.com/MikeWalz11) | [<img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="128">](https://github.com/brandon1024/find)
