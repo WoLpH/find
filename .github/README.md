@@ -5,16 +5,16 @@
 ![Firefox Users](https://img.shields.io/amo/users/brandon1024-find.svg?label=firefox%20users&style=flat)
 ![Last Commit on GitHub](https://img.shields.io/github/last-commit/brandon1024/find.svg?style=flat)
 
-**{find+}** is a simple _Find-in-Page_ extension for Google Chrome hosting a the ability to search a web page or document by regular expression. It has been designed to look and behave much like the `CTRL-F` function, but extended to provide a feature-rich and robust user experience with the aim of completely replacing the native _Find-in-Page_ tool.
+**{find+}** is a powerful _Find-in-Page_ extension for Google Chrome hosting the ability to search a web page or document by regular expression. It has been designed to look and behave much like the native `CTRL-F` function, but extended to provide a feature-rich and robust user experience with the aim of completely replacing the native _Find-in-Page_ tool. 
 
-Our principle is simple: deliver a reliable, robust, repeatable, performant, and native-like tool for the software and web development industry.
+With **{find+}**, you can match a regular expression against text in the page, use find-and-replace to replace text in the page, copy occurrences of a regex to your clipboard, store frequently used expressions, and configure the extension the way you like.
 
-<img src="screenshot.png"/>
+![](screencast.gif)
 
 ## Motivation
 As a software developer, looking through lengthy stack traces, continuous integration build history, or large text files is something we do very regularly. The Chrome _Find-in-Page_ tool works well in most cases, but offers very little when looking for very specific (or very general) keywords.
 
-The idea to build this tool spawned as a response to poorly designed or dysfunctional regex-search extensions currently available, and the limited usefulness of the native tool. This extension has become a growing project aimed at giving developers better tools to simplify certain tasks and to improve upon the functionally-limited tools currently available.
+The idea to build this tool spawned as a response to poorly designed or dysfunctional regex-search extensions currently available, and the limited usefulness of the native tool.
 
 ## Getting Started
 The **{find+}** extension is available through the Chrome Web Store and through the Firefox Add-ons Store.
@@ -32,24 +32,24 @@ To open the extension popup using a keyboard shortcut, you must first assign a k
 
 Here's what we recommend for displaying the extension popup.
 
-| Windows Shortcut  | macOS Shortcut    | Notes                                                                  |
-| :---------------- | :---------------- | :--------------------------------------------------------------------- |
-| CTRL-SHIFT-F      | CTRL-SHIFT-F      | Recommended: This shortcut will not have any conflicts with Chrome     |
-| CTRL-F            | COMMAND-F         | This shortcut will override the native find-in-page tool               |
+| Windows Shortcut                              | macOS Shortcut                                | Notes                                                                  |
+| :-------------------------------------------- | :-------------------------------------------- | :--------------------------------------------------------------------- |
+| <kbd>CTRL</kbd>+<kbd>⇧</kbd>+<kbd>F</kbd>     | <kbd>^</kbd>+<kbd>⇧</kbd>+<kbd>F</kbd>        | Recommended: This shortcut will not have any conflicts with Chrome     |
+| <kbd>CTRL</kbd>+<kbd>F</kbd>                  | <kbd>⌘</kbd>+<kbd>F</kbd>                     | This shortcut will override the native find-in-page tool               |
 
 Several keyboard shortcuts exist directly in the extension for performing different actions. These shortcuts are built directly into the extension and are not managed through Chrome. As a result, these settings cannot be remapped. Below is a list of the current keyboard shortcuts.
 
-| Windows Shortcut  | macOS Shortcut    | Action                                                                 |
-| :---------------- | :---------------- | :--------------------------------------------------------------------- |
-| ENTER             | ENTER             | Advance to the next occurrence of the regular expression in the page   |
-| SHIFT-ENTER       | SHIFT-ENTER       | Return to the previous occurrence of the regular expression in the page|
-| CTRL-SHIFT-ENTER  | CTRL-SHIFT-ENTER  | Follow the first highlighted link in the current occurrence focus      |
-| CTRL-ALT-C        | CTRL-OPTION-C     | Copy to the clipboard the currently highlighted text on the page.      |
-| CTRL-ALT-A        | CTRL-OPTION-A     | Copy to the clipboard the all highlighted text on the page.            |
-| CTRL-ALT-O        | CTRL-OPTION-O     | Expand or Collapse Options Pane                                        |
-| CTRL-ALT-R        | CTRL-OPTION-R     | Expand or Collapse Replace Text Pane                                   |
-| CTRL-ALT-H        | CTRL-OPTION-H     | Expand or Collapse History Pane                                        |
-| CTRL-ENTER or ESC | CTRL-ENTER or ESC | Close the extension popup                                              |
+| Windows Shortcut                                   | macOS Shortcut                                     | Action                                                                 |
+| :------------------------------------------------- | :------------------------------------------------- | :--------------------------------------------------------------------- |
+| <kbd>↵</kbd>                                       | <kbd>↵</kbd>                                       | Advance to the next occurrence of the regular expression in the page   |
+| <kbd>⇧</kbd>+<kbd>↵</kbd>                          | <kbd>⇧</kbd>+<kbd>↵</kbd>                          | Return to the previous occurrence of the regular expression in the page|
+| <kbd>CTRL</kbd>+<kbd>⇧</kbd>+<kbd>↵</kbd>          | <kbd>^</kbd>+<kbd>⇧</kbd>+<kbd>↵</kbd>             | Follow the first highlighted link in the current occurrence focus      |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>C</kbd>        | <kbd>^</kbd>+<kbd>⌥</kbd>+<kbd>C</kbd>             | Copy to the clipboard the currently highlighted text on the page.      |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>A</kbd>        | <kbd>^</kbd>+<kbd>⌥</kbd>+<kbd>A</kbd>             | Copy to the clipboard the all highlighted text on the page.            |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>O</kbd>        | <kbd>^</kbd>+<kbd>⌥</kbd>+<kbd>O</kbd>             | Expand or Collapse Options Pane                                        |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>R</kbd>        | <kbd>^</kbd>+<kbd>⌥</kbd>+<kbd>R</kbd>             | Expand or Collapse Replace Text Pane                                   |
+| <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>H</kbd>        | <kbd>^</kbd>+<kbd>⌥</kbd>+<kbd>H</kbd>             | Expand or Collapse History Pane                                        |
+| <kbd>CTRL</kbd>+<kbd>↵</kbd> or <kbd>ESC</kbd>     | <kbd>^</kbd>+<kbd>↵</kbd> or <kbd>ESC</kbd>        | Close the extension popup                                              |
 
 ## Omnibox Support
 In version 1.4.0, we introduced omnibox support! This allows you to highlight text on a page without even opening the extension. To use this feature, type `find` in your browser's address bar, press `TAB`, and then enter a regular expression. Occurrences of the regular expression will become highlighted on the page as you type.
@@ -58,18 +58,8 @@ Pressing `ENTER` will leave the highlights in the page. To remove the highlights
 
 <img src="omni.png"/>
 
-## Firefox Support
-This extension is now compatible with Mozilla Firefox. You can install the extension [here](https://addons.mozilla.org/en-US/firefox/addon/brandon1024-find/).
-
-<sup>Note: Although the extension is supported in Firefox, the extension was designed to be used in Chrome. As such, the user interface in Firefox is not as polished and refined. For the best user experience, use this extension in Chrome.</sup>
-
 ## Wiki
 We are continuously updating [our wiki](https://github.com/brandon1024/find/wiki) to provide help for new users and developers. Having an issue using the extension? Check out our [Frequently Asked Questions](https://github.com/brandon1024/find/wiki/FAQ-:-General) wiki!
-
-## A Small Notice
-Since **{find+}** is still in beta, you may experience bugs or issues while using the extension. We are hard at work fixing these issues, but we encourage you to continue using our extension in the meantime. You can keep an eye on current issues in progress by monitoring our GitHub page.
-
-See an issue we may have missed, or an idea for a new feature? Log an issue! We love to hear your feedback, it helps us make this project better.
 
 ## Contributing
 Interested in contributing to **{find+}**? See [CONTRIBUTING](CONTRIBUTING.md).
@@ -84,7 +74,7 @@ git clone <clone link from clipboard>
 ```
 <sup>Note: If you are using a Windows machine, you may need to install git [here](https://git-for-windows.github.io/).</sup>
 
-New features and improvents should be based off the `master` branch. All other branches are under active development, which may not be stable.
+New features and improvements should be based off the `master` branch. All other branches are under active development, which may not be stable.
 
 To install the extension in Chrome to test your changes, navigate to `chrome://extensions`. Enabling Developer Mode will show a button to `Load Unpacked`, which you can use to navigate to the parent folder of the extension.
 
@@ -106,4 +96,7 @@ Example:
 |[<img src="https://avatars3.githubusercontent.com/u/22732449?v=3&s=460" width="128">](https://github.com/brandon1024)|[<img src="https://avatars2.githubusercontent.com/u/27076448?v=3&s=460" width="128">](https://github.com/MikeWalz11) | [<img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="128">](https://github.com/brandon1024/find)
 |:---:|:---:|:---:|
 |[Brandon Richardson](https://github.com/brandon1024)| [Michael Walz](https://github.com/MikeWalz11) |[Become a Contributor](CONTRIBUTING.md)
-|<sup>Co-Owner, Arch, Deployment</sup>|<sup>Co-Owner, UI, backend</sup>|<sup>Have a talent?</sup>
+
+## License
+This project is licensed under the [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html).
+

@@ -24,7 +24,7 @@
         <div id="popup-body">
             <div id="popup-body-container">
                 <div id="search-field-container">
-                    <input class="field" id="search-field" type="text" name="search" autocomplete="off"
+                    <input class="field def-font" id="search-field" type="text" name="search" autocomplete="off"
                            data-locale-title="search_field_title"/>
 
                     <!-- Area for search warnings, errors, and current index information -->
@@ -33,6 +33,8 @@
                              data-locale-title="malformed_regex_error_title"/>
                         <img class="extension-error-icon" id="clipboard-copy-error" src="/resources/exclamation.svg"
                              data-locale-title="clipboard_copy_error_title"/>
+                        <img class="extension-error-icon" id="iframes-found-icon" src="/resources/exclamation.svg"
+                             data-locale-title="iframes_found_warning_title"/>
                         <img class="extension-error-icon" id="clipboard-copy-icon" src="/resources/check-square.svg"
                              data-locale-title="clipboard_copy_title"/>
                         <img class="extension-error-icon" id="install-information" src="/resources/question-circle.svg"
@@ -156,6 +158,22 @@
                                   data-locale-text="search_option_persistent_highlights_text"></span>
                             <img class="information-hover-icon" src="/resources/question-circle.svg"
                                  data-locale-title="search_option_persistent_highlights_title"/>
+                        </td>
+                    </tr>
+
+                    <!-- Persistent Storage in Incognito Option -->
+                    <tr>
+                        <td class="options-table-toggle-cell">
+                            <label class="switch">
+                                <input id="regex-option-persistent-storage-incognito-toggle" type="checkbox"/>
+                                <div class="toggle-slider"/>
+                            </label>
+                        </td>
+                        <td>
+                            <span class="def-font"
+                                  data-locale-text="extension_option_persistent_storage_incognito_text"></span>
+                            <img class="information-hover-icon" src="/resources/question-circle.svg"
+                                 data-locale-title="extension_option_persistent_storage_incognito_title"/>
                         </td>
                     </tr>
                 </tbody>
